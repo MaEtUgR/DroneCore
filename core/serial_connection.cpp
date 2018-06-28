@@ -2,6 +2,11 @@
 #include "global_include.h"
 #include "log.h"
 
+#if defined(__CYGWIN__)
+#undef LINUX
+#define APPLE
+#endif
+
 #if defined(LINUX)
 #include <unistd.h>
 #include <fcntl.h>
